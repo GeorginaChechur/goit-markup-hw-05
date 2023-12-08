@@ -620,7 +620,8 @@ letter-spacing: 0.48px;
     padding: 63px 24px;
 }
 
-li:hover .content-text {
+li:hover .content-text,
+li:focus .content-text {
     bottom: 0;
 }
 
