@@ -145,6 +145,9 @@ img {
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.28px;
+    transition-property: color;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current::after {
@@ -165,9 +168,6 @@ img {
 .header-menu:hover,
 .header-menu:focus {
     color: var(--accent-cl);
-    transform: scale(1.12);
-    transition-duration: 0.25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu.current {
@@ -185,14 +185,14 @@ img {
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.28px;
+    transition-property: color;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-menu:hover,
 .contacts-menu:focus {
     color: var(--accent-cl);
-    transform: scale(1.12);
-    transition-duration: 0.25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -252,7 +252,8 @@ img {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.20);
     z-index: 1;
-    transition: opacity 0.25s;
+    transition-property: opacity; 
+    transition-duration: 0.25s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
     visibility: visible;
@@ -263,7 +264,7 @@ img {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -277,12 +278,15 @@ img {
     height: 581px;
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-    animation-name: openModal;
+    /* animation-name: openModal;
     animation-duration: 0.25s;
     animation-fill-mode: both;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    transition-property: opacity, box-shadow,background-color; 
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     visibility: visible;
-    opacity: 0;
+    opacity: 1;
     
 
     
@@ -521,6 +525,9 @@ align-items: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-property: background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -530,6 +537,9 @@ align-items: center;
 
 .social-icon {
     fill: #AFB1B8;
+    transition-property: fill;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .social-link:hover,
@@ -537,18 +547,12 @@ align-items: center;
  {
     background-color: var(--accent-cl);
     fill: var(--white-color);
-    transform:rotate(360deg);
-    transition-duration: 0.25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
     background-color: var(--accent-cl);
     fill: var(--white-color);
-    transform: rotate(360deg);
-    transition-duration: 0.25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -588,6 +592,10 @@ font-size: 16px;
 font-weight: 500;
 line-height: 1.62em;
 letter-spacing: 0.48px;
+/* transition: box-shadow 3s, color 3s, background-color 3s; */
+transition-property: box-shadow, color, background-color;
+transition-duration: 0.25s;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
@@ -595,9 +603,6 @@ letter-spacing: 0.48px;
     color: var(--white-color);
     background-color: var(--accent-cl);
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
-    transform: scale(1.1);
-    transition-duration: 0.25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------------
@@ -613,14 +618,15 @@ letter-spacing: 0.48px;
 
 .content-link {
     display: block;
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .content-link:hover,
 .content-link:focus {
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-    transition-duration: 0.25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -635,7 +641,8 @@ letter-spacing: 0.48px;
     width: 370px;
     height: 294px;
     bottom: -294px;
-    transition: bottom 0.25s;
+    transition-property: bottom;
+    transition-duration: 0.25s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     color: var(--white-color);
@@ -645,6 +652,7 @@ letter-spacing: 0.48px;
     line-height: 28px;
     letter-spacing: 0.54px;
     padding: 63px 24px;
+    
 }
 
 li:hover .content-text,
@@ -718,6 +726,9 @@ li:focus .content-text {
     height: 92px;
     border-radius: 4px;
     border: 1px solid #AFB1B8;
+    transition-property: border;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item:last-child {
@@ -728,19 +739,20 @@ li:focus .content-text {
 .customers-link:focus {
     fill: var(--accent-cl);
     border: 1px solid var(--accent-cl);
-    transform: scale(1.1);
-    transition-duration: 0.25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover .customers-icon,
 .customers-link:focus .customers-icon {
     fill: var(--accent-cl);
+   
 }
 
 
 .customers-icon {
     fill: #AFB1B8;
+    transition-property: fill;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -793,6 +805,9 @@ li:focus .content-text {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-property: background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-item {
@@ -809,9 +824,6 @@ li:focus .content-text {
 .join-link:hover,
 .join-link:focus {
     background-color: var(--accent-cl);
-    transform: rotate(360deg);
-    transition-duration: 0.25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-icon {
@@ -843,13 +855,13 @@ li:focus .content-text {
 .address-link {
     color: rgba(255, 255, 255, 0.60);
     font-style: normal;
+    transition-property: color;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover,
 .address-link:focus {
     color: var(--accent-cl);
-    transition-property: opacity; 
-    transition-duration: 0.25s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
