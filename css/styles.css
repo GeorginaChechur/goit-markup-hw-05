@@ -264,7 +264,6 @@ img {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    /* transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1); */
     
 }
 
@@ -273,16 +272,11 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    /* transform: scale(1); */
     background-color: var(--white-color);
     width: 528px;
     height: 581px;
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-    /* animation-name: openModal;
-    animation-duration: 0.25s;
-    animation-fill-mode: both;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
     transition-property: transform; 
     transition-duration: 0.25s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -530,7 +524,7 @@ align-items: center;
     align-items: center;
     justify-content: center;
     transition-property: background-color;
-    transition-duration: 2s;
+    transition-duration: 0.25s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
