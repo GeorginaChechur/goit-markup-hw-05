@@ -252,7 +252,7 @@ img {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.20);
     z-index: 1;
-    transition-property: opacity; 
+    transition-property: opacity, visibility; 
     transition-duration: 0.25s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
@@ -264,7 +264,7 @@ img {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1); */
     
 }
 
@@ -272,7 +272,8 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    /* transform: scale(1); */
     background-color: var(--white-color);
     width: 528px;
     height: 581px;
@@ -282,14 +283,16 @@ img {
     animation-duration: 0.25s;
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-    transition-property: opacity, box-shadow,background-color; 
+    transition-property: transform; 
     transition-duration: 0.25s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     visibility: visible;
     opacity: 1;
     
+}
 
-    
+.backdrop.is-hidden .modal-wrapper{
+    transform: translate(-50%, -50%) scale(0.78);
 }
 
 .modal-btn {
@@ -518,6 +521,7 @@ align-items: center;
     margin-right: 10px;
 }
 
+
 .social-link {
     width: 44px;
     height: 44px;
@@ -526,7 +530,7 @@ align-items: center;
     align-items: center;
     justify-content: center;
     transition-property: background-color;
-    transition-duration: 0.25s;
+    transition-duration: 2s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -551,7 +555,7 @@ align-items: center;
 
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
-    background-color: var(--accent-cl);
+    /* background-color: var(--accent-cl); */
     fill: var(--white-color);
 }
 
